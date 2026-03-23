@@ -16,7 +16,19 @@ st.title("📄 Enterprise Document AI Assistant")
 st.markdown("Upload a PDF and ask questions about it!")
 
 # API Key
-groq_api_key = st.text_input("Enter your Groq API Key", type="password")
+groq_api_key = os.environ.get("GROQ_API_KEY", "")
+if not groq_api_key:
+    groq_api_key = st.text_input("Enter your Groq API Key", type="password")
+```
+5. Commit changes
+
+**Step 2 — Add secret in Streamlit Cloud:**
+1. Go to 👉 [share.streamlit.io](https://share.streamlit.io)
+2. Find your app
+3. Click **Settings** → **Secrets**
+4. Add:
+```
+GROQ_API_KEY = "your_groq_api_key_here"
 
 if groq_api_key:
     llm = ChatGroq(
