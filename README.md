@@ -1,3 +1,5 @@
+## 🚀 Live Demo
+👉 [Try the app here](https://enterprise-document-ai-assistant-kbd494ez4iargfij6znaqj.streamlit.app/)
 # Enterprise Document AI Assistant (RAG System)
 
 An intelligent Q&A system that answers questions from enterprise documents using 
