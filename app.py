@@ -1,4 +1,3 @@
-
 import os
 import streamlit as st
 from langchain_groq import ChatGroq
@@ -15,20 +14,9 @@ st.set_page_config(page_title="Enterprise Document AI Assistant", page_icon="�
 st.title("📄 Enterprise Document AI Assistant")
 st.markdown("Upload a PDF and ask questions about it!")
 
-# API Key
 groq_api_key = os.environ.get("GROQ_API_KEY", "")
 if not groq_api_key:
     groq_api_key = st.text_input("Enter your Groq API Key", type="password")
-```
-5. Commit changes
-
-**Step 2 — Add secret in Streamlit Cloud:**
-1. Go to 👉 [share.streamlit.io](https://share.streamlit.io)
-2. Find your app
-3. Click **Settings** → **Secrets**
-4. Add:
-```
-GROQ_API_KEY = "your_groq_api_key_here"
 
 if groq_api_key:
     llm = ChatGroq(
@@ -58,7 +46,6 @@ if groq_api_key:
                 model_name="sentence-transformers/all-MiniLM-L6-v2"
             )
             vector_store = FAISS.from_documents(chunks, embeddings)
-
             retriever = vector_store.as_retriever(search_kwargs={"k": 3})
 
             prompt = PromptTemplate.from_template("""
