@@ -1,5 +1,9 @@
 import os
 import streamlit as st
+
+st.write(os.getenv("GROQ_API_KEY"))
+import os
+import streamlit as st
 from langchain_groq import ChatGroq
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
