@@ -1,10 +1,11 @@
 ## 🚀 Live Demo
 👉 [Try the app here](https://enterprise-document-ai-assistant-kbd494ez4iargfij6znaqj.streamlit.app/)
 # Enterprise Document AI Assistant (RAG + LLM System)
+Built an end-to-end Retrieval-Augmented Generation (RAG) system for intelligent question answering over enterprise documents using LLMs and vector search.
 
-An intelligent Q&A system that answers questions from enterprise documents using 
-Retrieval-Augmented Generation (RAG), LLMs, and semantic vector search.
+🚀 Overview
 
+An intelligent document Q&A system that enables users to upload PDF files and ask natural language questions. The system retrieves relevant context using semantic search and generates accurate, context-aware responses using large language models.
 ## Features
 - Upload any PDF document
 - Ask natural language questions
