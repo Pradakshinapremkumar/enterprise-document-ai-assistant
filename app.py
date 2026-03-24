@@ -1,7 +1,5 @@
 import os
 import streamlit as st
-
-st.write(os.getenv("GROQ_API_KEY"))
 import os
 import streamlit as st
 from langchain_groq import ChatGroq
