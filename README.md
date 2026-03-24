@@ -37,3 +37,8 @@ streamlit run app.py
 ```
 GROQ_API_KEY=your_groq_api_key
 ```
+## 📷 Demo
+
+![Input](input.png)
+
+![Output](output.png)
